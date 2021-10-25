@@ -1,0 +1,66 @@
+.main-container {
+  display: grid;
+  grid-template-columns:
+    160px
+    1fr
+    160px;
+    grid-template-rows:
+    160px
+    1fr
+    1fr
+    1fr
+    100px;
+
+  > * {
+    grid-column: 2/3;
+  }
+
+  span{
+    grid-column: 1;
+    grid-row: 2;
+  }
+
+  .spanImg{
+    grid-column: 3/4;
+    grid-row: 3;
+      img{
+          position: static;
+      }
+  }
+
+  > .full {
+    grid-column: 1 / -1;
+  }
+
+  // @include for-narrow-layout {
+  //   grid-template-columns:
+  //     1fr
+  //     minmax(auto, $mobile-breakpoint)
+  //     1fr;
+  // }
+
+  // @include for-normal-layout {
+  //   grid-template-columns:
+  //     1fr
+  //     minmax(auto, $narrow-breakpoint)
+  //     1fr;
+  // }
+
+  // @include for-wide-layout {
+  //   grid-template-columns:
+  //     1fr
+  //     minmax(auto, $normal-breakpoint)
+  //     1fr;
+  // }
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 20px;
+  grid-auto-flow: dense;
+
+  > * {
+    @include aspect-ratio(1, 1);
+  }
+}

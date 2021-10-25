@@ -1,0 +1,47 @@
+// Setup
+@import "setup/variables.scss";
+@import "setup/functions.scss";
+@import "setup/mixins.scss";
+@import "setup/typography.scss";
+
+// Basics
+@import "basics/helpers.scss";
+@import "basics/layout.scss";
+@import "basics/base.scss";
+@import "basics/buttons.scss";
+
+// @import "views/home-page";
+// Components
+
+@import "components/header.scss";
+@import "components/hero.scss";
+@import "components/main.scss";
+
+
+.web{
+    height: 100%;
+ flex-direction: column;
+}
+
+.div1{
+    flex-direction: column;
+    background-color:#014d56 ;
+   flex-grow: 1;
+   span{
+      position: relative; 
+      img{
+          position: absolute;
+          left: -100px;
+      }
+   }
+
+
+}
+.div2{
+    background-color:#002f34 ;
+    flex-grow: 1;
+}
+.div3{
+    background-color:#014d56 ;
+    flex-grow: 1;
+}
